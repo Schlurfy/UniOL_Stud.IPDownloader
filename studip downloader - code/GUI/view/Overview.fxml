@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import view.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.view.OverviewController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab text="Downloader">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <ProgressBar fx:id="progress" layoutX="14.0" layoutY="358.0" prefHeight="31.0" prefWidth="570.0" progress="0.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                        <Button layoutX="483.0" layoutY="318.0" mnemonicParsing="false" onAction="#downloadSelected" prefHeight="31.0" prefWidth="101.0" text="Download" AnchorPane.bottomAnchor="62.0" AnchorPane.rightAnchor="15.0" />
+                        <!--Button layoutX="14.0" layoutY="318.0" mnemonicParsing="false" onAction="#selectAll" prefHeight="31.0" prefWidth="101.0" text="Select all" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="15.0" />
+                        <Button layoutX="136.0" layoutY="318.0" mnemonicParsing="false" onAction="#selectNew" prefHeight="31.0" prefWidth="101.0" text="Select new" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="136.0" /-->
+                        <TreeView fx:id="coursesOverview" layoutX="12.0" layoutY="13.0" prefHeight="286.0" prefWidth="573.0" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="13.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Preferences">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <Accordion layoutX="26.0" layoutY="56.0" prefHeight="432.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <panes>
+                            <TitledPane prefHeight="380.0" prefWidth="299.0" text="Directories">
+                                 <content>
+                                    <AnchorPane prefHeight="127.0" prefWidth="320.0">
+                                       <children>
+                                          <TextField fx:id="logDirectory" layoutX="26.0" layoutY="128.0" prefHeight="31.0" prefWidth="468.0" AnchorPane.leftAnchor="14.0" />
+                                          <Button layoutX="476.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleLogDirectory" onMouseClicked="#handleLogDirectory" prefHeight="31.0" prefWidth="52.0" text="..." />
+                                          <Label layoutX="26.0" layoutY="14.0" text="Download Directory" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="downloadDirectory" layoutX="37.0" layoutY="42.0" prefHeight="31.0" prefWidth="475.0" AnchorPane.leftAnchor="14.0" />
+                                          <Button layoutX="476.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#handleDownloadDirectory" prefHeight="31.0" prefWidth="52.0" text="..." />
+                                          <Separator layoutX="12.0" layoutY="80.0" prefHeight="8.0" prefWidth="543.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                          <Label layoutX="26.0" layoutY="100.0" text="Log Directory" AnchorPane.leftAnchor="14.0" />
+                                          <Separator layoutX="14.0" layoutY="168.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                          <Button layoutX="528.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#handlePreferencesSave" text="Save" AnchorPane.rightAnchor="19.0" />
+                                          <Button layoutX="26.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#handleReset" text="Reset Paths" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                            </TitledPane>
+                            <TitledPane animated="false" expanded="false" text="Preferences">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button layoutX="467.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleUserChange" text="Change User" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0" />
+                                          <TextArea fx:id="log" layoutX="38.0" layoutY="57.0" prefHeight="277.0" prefWidth="546.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="45.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
