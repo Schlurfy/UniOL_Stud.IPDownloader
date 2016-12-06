@@ -12,10 +12,10 @@ Bei Problemen oder Fragen bitte eine E-Mail an felix.neddermann@uol.de.
 
 Bekannte Probleme:
 
+- Keine Daten aus geschlossenen Veranstaltungen
 - Ladescreens allg. nicht vorhanden
 - Benachrichtigung, wenn der Download durchgelaufen ist
 - Rekursive  Ordnerstrukturen (Unterordner)
-- Keine Daten aus geschlossenen Veranstaltungen
 - Diverse Rechtschreibfehler
 
 Viel Spaß
